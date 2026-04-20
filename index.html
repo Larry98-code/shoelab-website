@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>ShoeLab.de — Premium Shoe Care · Bremen</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&family=Barlow+Condensed:ital,wght@0,300;0,600;0,700;1,300;1,700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="assets/css/styles.css"/>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#hero" class="nav-brand">
+    <img src="assets/images/logo.png" alt="ShoeLab" class="nav-logo-img"/>
+    <span class="nav-brand-text">ShoeLab<span>.de</span></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#booking">Book</a></li>
+    <li><a href="#shop" style="color:var(--red);">Shop</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#booking" class="nav-cta">Book Now</a>
+  <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mob-menu" id="mobMenu">
+  <button class="mob-close" id="mobClose">✕</button>
+  <a href="#services" onclick="closeMob()">Services</a>
+  <a href="#gallery" onclick="closeMob()">Gallery</a>
+  <a href="#booking" onclick="closeMob()">Book</a>
+  <a href="#shop" onclick="closeMob()" style="color:var(--red);">Shop</a>
+  <a href="#reviews" onclick="closeMob()">Reviews</a>
+  <a href="#booking" onclick="closeMob()">Contact</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg-lines"></div>
+  <div class="hero-red-glow"></div>
+  <div class="hero-inner">
+    <div class="hero-left">
+      <p class="hero-eyebrow">Bremen's Premier Shoe Care Studio</p>
+      <h1 class="hero-title">
+        Your Kicks<br>
+        <span class="red">Deserve</span><br>
+        <span class="outline">The Lab</span>
+      </h1>
+      <p class="hero-desc">Professional cleaning, deep restoration and sneaker detailing — carried out with scientific precision in the heart of Bremen.</p>
+      <div class="hero-actions">
+        <a href="#booking" class="btn-red">Book Your Slot</a>
+        <a href="#services" class="btn-outline">See Services</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-logo-wrap">
+        <div class="hero-logo-ring"></div>
+        <div class="hero-logo-ring2"></div>
+        <img src="assets/images/logo.png" alt="ShoeLab" class="hero-logo-img"/>
+        <div class="hero-badge">Bremen, Germany</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stat-strip">
+  <div class="stat-item fade-up"><div class="stat-num">500+</div><div class="stat-label">Pairs Cleaned</div></div>
+  <div class="stat-item fade-up delay-1"><div class="stat-num">★ 4.9</div><div class="stat-label">Customer Rating</div></div>
+  <div class="stat-item fade-up delay-2"><div class="stat-num">3</div><div class="stat-label">Expert Services</div></div>
+  <div class="stat-item fade-up delay-3"><div class="stat-num">100%</div><div class="stat-label">Pro-Grade Products</div></div>
+</div>
+
+<!-- SERVICES -->
+<section id="services" class="section">
+  <div class="services-hd fade-up">
+    <p class="sec-label">What We Do</p>
+    <h2 class="sec-title">Our <span class="red">Services</span></h2>
+    <div class="rule"></div>
+    <p class="sec-sub">Every treatment uses pro-grade products and expert technique — because your shoes are worth it.</p>
+  </div>
+  <div class="services-grid">
+    <div class="svc-card fade-up">
+      <div class="svc-num">01</div>
+      <svg class="svc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8"/></svg>
+      <h3 class="svc-name">Basic Cleaning</h3>
+      <p class="svc-tag">The Essential Treatment</p>
+      <p class="svc-desc">Surface clean that removes dirt, revives colour and leaves your shoes looking shop-fresh.</p>
+      <ul class="svc-list">
+        <li>Full exterior surface clean</li>
+        <li>Sole & midsole wipe</li>
+        <li>Lace cleaning or swap</li>
+        <li>Protective spray finish</li>
+      </ul>
+      <div class="svc-price">From €18 <span>/ pair</span></div>
+    </div>
+    <div class="svc-card fade-up delay-1">
+      <div class="svc-num">02</div>
+      <svg class="svc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+      <h3 class="svc-name">Deep Cleaning</h3>
+      <p class="svc-tag">Full Restoration</p>
+      <p class="svc-desc">For heavily soiled or neglected pairs. We go deep — lifting stains, refreshing materials, restoring structure.</p>
+      <ul class="svc-list">
+        <li>Full disassembly & soak</li>
+        <li>Stain & scuff removal</li>
+        <li>Interior deodorising</li>
+        <li>Material conditioning</li>
+        <li>Sole re-whitening</li>
+      </ul>
+      <div class="svc-price">From €35 <span>/ pair</span></div>
+    </div>
+    <div class="svc-card fade-up delay-2">
+      <div class="svc-num">03</div>
+      <svg class="svc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 20h9M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 19.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.854z"/></svg>
+      <h3 class="svc-name">Sneaker Detailing</h3>
+      <p class="svc-tag">Collector-Grade Finish</p>
+      <p class="svc-desc">The full lab treatment for premium and limited-edition sneakers. Every millimetre inspected and perfected.</p>
+      <ul class="svc-list">
+        <li>Premium deep clean</li>
+        <li>Crease & wrinkle treatment</li>
+        <li>Paint pen touch-up</li>
+        <li>UV protective coating</li>
+        <li>Museum-grade finish</li>
+        <li>Presentation-ready packaging</li>
+      </ul>
+      <div class="svc-price">From €60 <span>/ pair</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="section">
+  <div class="gallery-hd fade-up">
+    <p class="sec-label">The Lab's Work</p>
+    <h2 class="sec-title">Before &amp; <span class="red">After</span></h2>
+    <div class="rule"></div>
+    <p class="sec-sub">Results straight from the lab. Add your before/after photos here to show the transformation.</p>
+  </div>
+  <div class="gallery-grid">
+    <div class="g-item fade-up">
+      <div class="g-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>Upload your best work</div>
+      <div class="g-overlay"><span class="g-tag">Deep Clean</span></div>
+    </div>
+    <div class="g-item fade-up delay-1">
+      <div class="g-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>Before &amp; After</div>
+      <div class="g-overlay"><span class="g-tag">Detailing</span></div>
+    </div>
+    <div class="g-item fade-up delay-2">
+      <div class="g-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>Sneaker Restore</div>
+      <div class="g-overlay"><span class="g-tag">Restoration</span></div>
+    </div>
+    <div class="g-item fade-up delay-3">
+      <div class="g-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>Sneaker Collection</div>
+      <div class="g-overlay"><span class="g-tag">Basic Clean</span></div>
+    </div>
+  </div>
+  <div class="gallery-cta"><a href="#booking" class="btn-outline">See Full Portfolio →</a></div>
+</section>
+
+<!-- BOOKING -->
+<section id="booking" class="section">
+  <div class="booking-inner">
+    <div class="booking-left fade-up">
+      <p class="sec-label">Reservations</p>
+      <h2 class="sec-title">Book Your <span class="red">Appointment</span></h2>
+      <div class="rule"></div>
+      <p>Reserve your slot online and drop your sneakers at our lab in Bremen. We'll handle everything and notify you when your pair is ready.</p>
+      <ul class="contact-list" id="contact">
+        <li>
+          <svg class="c-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div><div class="c-lbl">Studio</div><div class="c-val">Wallerheerstr, 28217 Bremen</div></div>
+        </li>
+        <li>
+          <svg class="c-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l.81-.81a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg>
+          <div><div class="c-lbl">Phone / WhatsApp</div><div class="c-val">+49 177 2258878</div></div>
+        </li>
+        <li>
+          <svg class="c-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <div><div class="c-lbl">Email</div><div class="c-val">Shoelab.de@gmail.com</div></div>
+        </li>
+        <li>
+          <svg class="c-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          <div><div class="c-lbl">Instagram</div><div class="c-val"><a href="https://instagram.com/Shoelab.brnm" target="_blank" style="color:var(--red);text-decoration:none;">ShoeLab Brmn</a></div></div>
+        </li>
+        <li>
+          <svg class="c-icon" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.75a8.27 8.27 0 0 0 4.84 1.55V6.85a4.85 4.85 0 0 1-1.07-.16z"/></svg>
+          <div><div class="c-lbl">TikTok</div><div class="c-val"><a href="https://tiktok.com/@shoelab.brnm" target="_blank" style="color:var(--red);text-decoration:none;">ShoeLab Brmn</a></div></div>
+        </li>
+        <li>
+          <svg class="c-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <div><div class="c-lbl">Hours</div><div class="c-val">Mon – Fri 10:00–19:00 &nbsp;|&nbsp; Sat 10:00–16:00</div></div>
+        </li>
+      </ul>
+    </div>
+    <div class="bk-form fade-up delay-1">
+      <h3 class="bk-form-title">Reserve Your Slot</h3>
+      <p class="bk-form-sub">We confirm within 24 hours · Free cancellation up to 24h before</p>
+      <div class="frow">
+        <div class="fg"><label>First Name</label><input type="text" placeholder="Max"/></div>
+        <div class="fg"><label>Last Name</label><input type="text" placeholder="Mustermann"/></div>
+      </div>
+      <div class="fg"><label>Email</label><input type="email" placeholder="max@email.de"/></div>
+      <div class="fg"><label>Phone / WhatsApp</label><input type="tel" placeholder="+49 …"/></div>
+      <div class="fg">
+        <label>Service</label>
+        <select>
+          <option value="" disabled selected>Select a service</option>
+          <option>Basic Cleaning — from €18</option>
+          <option>Deep Cleaning / Restoration — from €35</option>
+          <option>Sneaker Detailing — from €60</option>
+        </select>
+      </div>
+      <div class="frow">
+        <div class="fg"><label>Preferred Date</label><input type="date"/></div>
+        <div class="fg">
+          <label>Time Slot</label>
+          <select>
+            <option value="" disabled selected>Choose time</option>
+            <option>10:00 – 11:00</option><option>11:00 – 12:00</option>
+            <option>13:00 – 14:00</option><option>14:00 – 15:00</option>
+            <option>15:00 – 16:00</option><option>16:00 – 17:00</option>
+            <option>17:00 – 18:00</option>
+          </select>
+        </div>
+      </div>
+      <div class="fg"><label>Notes (brand, model, issue)</label><textarea placeholder="e.g. Nike Air Max 1, yellowed soles, scuff on left toe…"></textarea></div>
+      <button class="bk-submit" onclick="handleBook(this)">CONFIRM RESERVATION</button>
+      <p class="bk-note">No payment required now · We'll email your confirmation</p>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews" class="section">
+  <div class="reviews-hd fade-up">
+    <p class="sec-label">Client Reviews</p>
+    <h2 class="sec-title">What They <span class="red">Say</span></h2>
+    <div class="rule"></div>
+  </div>
+  <div class="reviews-grid">
+    <div class="rv-card fade-up">
+      <div class="rv-stars">★★★★★</div>
+      <p class="rv-text">My white Air Force 1s came back looking brand new. The level of detail is insane — I won't take my sneakers anywhere else.</p>
+      <div class="rv-author">Lena K.</div><div class="rv-loc">Bremen-Mitte</div>
+    </div>
+    <div class="rv-card fade-up delay-1">
+      <div class="rv-stars">★★★★★</div>
+      <p class="rv-text">Brought in my vintage leather boots expecting little. They returned looking like they were bought yesterday. Absolute pros.</p>
+      <div class="rv-author">Tobias R.</div><div class="rv-loc">Schwachhausen</div>
+    </div>
+    <div class="rv-card fade-up delay-2">
+      <div class="rv-stars">★★★★★</div>
+      <p class="rv-text">Fast, reliable and the results speak for themselves. I trust no one else with my collection. ShoeLab is the real deal.</p>
+      <div class="rv-author">Amina S.</div><div class="rv-loc">Überseestadt</div>
+    </div>
+  </div>
+</section>
+
+<!-- SHOP -->
+<section id="shop">
+
+  <!-- Ticker -->
+  <div class="shop-ticker">
+    <div class="shop-ticker-inner">
+      <span class="shop-ticker-item">FREE SHIPPING OVER €50</span>
+      <span class="shop-ticker-item">CREP PROTECT</span>
+      <span class="shop-ticker-item">JASON MARKK</span>
+      <span class="shop-ticker-item">RESHOEVN8R</span>
+      <span class="shop-ticker-item">SNEAKER LAB</span>
+      <span class="shop-ticker-item">100% AUTHENTIC</span>
+      <span class="shop-ticker-item">FAST DELIVERY BREMEN</span>
+      <span class="shop-ticker-item">FREE SHIPPING OVER €50</span>
+      <span class="shop-ticker-item">CREP PROTECT</span>
+      <span class="shop-ticker-item">JASON MARKK</span>
+      <span class="shop-ticker-item">RESHOEVN8R</span>
+      <span class="shop-ticker-item">SNEAKER LAB</span>
+      <span class="shop-ticker-item">100% AUTHENTIC</span>
+      <span class="shop-ticker-item">FAST DELIVERY BREMEN</span>
+    </div>
+  </div>
+
+  <div class="section" style="padding-top:4rem;">
+
+    <div class="fade-up" style="margin-bottom:3rem;">
+      <p class="sec-label">The Lab Store</p>
+      <h2 class="sec-title">Shop <span class="red">Products</span></h2>
+      <div class="rule"></div>
+      <p class="sec-sub">Only the brands the pros trust. Every product hand-picked and used in our own studio.</p>
+    </div>
+
+    <!-- Featured Bundle Banner -->
+    <div class="shop-banner fade-up">
+      <div>
+        <p class="banner-label">⚡ Limited Bundle</p>
+        <h3 class="banner-title">The ShoeLab Starter Kit</h3>
+        <p class="banner-sub">Everything you need to clean like a pro — brush, cleaner, microfibre & protector spray. Curated by our lab team.</p>
+      </div>
+      <div class="banner-price">
+        <div class="banner-price-val">€49.99</div>
+        <div class="banner-price-note">Save €18 vs. buying separately</div>
+        <button class="btn-red" onclick="addToCart('starter-kit','ShoeLab Starter Kit','Bundle',49.99,'🧪')" style="font-size:0.68rem;padding:0.7rem 1.5rem;">Add Bundle to Cart</button>
+      </div>
+    </div>
+
+    <!-- Filters -->
+    <div class="shop-filters fade-up">
+      <button class="filter-btn active" onclick="filterProducts('all',this)">All Products</button>
+      <button class="filter-btn" onclick="filterProducts('cleaner',this)">Cleaners</button>
+      <button class="filter-btn" onclick="filterProducts('brush',this)">Brushes</button>
+      <button class="filter-btn" onclick="filterProducts('protector',this)">Protectors</button>
+      <button class="filter-btn" onclick="filterProducts('kit',this)">Kits</button>
+      <button class="filter-btn" onclick="filterProducts('accessory',this)">Accessories</button>
+    </div>
+
+    <!-- Product Grid -->
+    <div class="shop-grid" id="shopGrid">
+
+      <!-- 1 -->
+      <div class="prod-card fade-up" data-cat="cleaner">
+        <div class="prod-img-wrap">
+          <div class="prod-img-bg" style="background:linear-gradient(135deg,#1a1a2e,#0d0d1a);">
+            <div class="prod-emoji">🧴</div>
+            <span class="prod-img-label">Jason Markk</span>
+          </div>
+          <span class="prod-badge">Best Seller</span>
+          <div class="prod-quick" onclick="addToCart('jm-cleaner','Jason Markk Premium Cleaner','Jason Markk',16.99,'🧴')">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            Add to Cart
+          </div>
+        </div>
+        <div class="prod-info">
+          <p class="prod-brand">Jason Markk</p>
+          <h4 class="prod-name">Premium Shoe Cleaner</h4>
+          <p class="prod-desc">The world's most trusted sneaker cleaner. Safe on all materials — leather, suede, mesh & canvas.</p>
+          <div class="prod-footer">
+            <div><div class="prod-stars">★★★★★</div><div class="prod-price">€16.99</div></div>
+            <button class="btn-red" style="padding:0.5rem 1rem;font-size:0.6rem;" onclick="addToCart('jm-cleaner','Jason Markk Premium Cleaner','Jason Markk',16.99,'🧴')">+ Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="prod-card fade-up delay-1" data-cat="brush">
+        <div class="prod-img-wrap">
+          <div class="prod-img-bg" style="background:linear-gradient(135deg,#1a0a0a,#2a0808);">
+            <div class="prod-emoji">🪥</div>
+            <span class="prod-img-label">Reshoevn8r</span>
+          </div>
+          <span class="prod-badge new">New</span>
+          <div class="prod-quick" onclick="addToCart('r8r-brush','Reshoevn8r Brush Set','Reshoevn8r',24.99,'🪥')">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            Add to Cart
+          </div>
+        </div>
+        <div class="prod-info">
+          <p class="prod-brand">Reshoevn8r</p>
+          <h4 class="prod-name">3-Brush Cleaning Set</h4>
+          <p class="prod-desc">Soft, medium & stiff bristle brushes — the complete arsenal for any cleaning job.</p>
+          <div class="prod-footer">
+            <div><div class="prod-stars">★★★★★</div><div class="prod-price">€24.99</div></div>
+            <button class="btn-red" style="padding:0.5rem 1rem;font-size:0.6rem;" onclick="addToCart('r8r-brush','Reshoevn8r Brush Set','Reshoevn8r',24.99,'🪥')">+ Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="prod-card fade-up delay-2" data-cat="protector">
+        <div class="prod-img-wrap">
+          <div class="prod-img-bg" style="background:linear-gradient(135deg,#0a1a0a,#081808);">
+            <div class="prod-emoji">🛡️</div>
+            <span class="prod-img-label">Crep Protect</span>
+          </div>
+          <span class="prod-badge">Top Rated</span>
+          <div class="prod-quick" onclick="addToCart('crep-spray','Crep Protect Spray','Crep Protect',14.99,'🛡️')">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            Add to Cart
+          </div>
+        </div>
+        <div class="prod-info">
+          <p class="prod-brand">Crep Protect</p>
+          <h4 class="prod-name">Ultimate Protector Spray</h4>
+          <p class="prod-desc">Industry-leading nano-tech formula. Repels water, oil & stains without affecting breathability.</p>
+          <div class="prod-footer">
+            <div><div class="prod-stars">★★★★★</div><div class="prod-price">€14.99</div></div>
+            <button class="btn-red" style="padding:0.5rem 1rem;font-size:0.6rem;" onclick="addToCart('crep-spray','Crep Protect Spray','Crep Protect',14.99,'🛡️')">+ Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="prod-card fade-up delay-3" data-cat="kit">
+        <div class="prod-img-wrap">
+          <div class="prod-img-bg" style="background:linear-gradient(135deg,#1a1200,#2a1e00);">
+            <div class="prod-emoji">🧪</div>
+            <span class="prod-img-label">Sneaker Lab</span>
+          </div>
+          <span class="prod-badge bundle">Bundle</span>
+          <div class="prod-quick" onclick="addToCart('sl-kit','Sneaker Lab Pro Kit','Sneaker Lab',39.99,'🧪')">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            Add to Cart
+          </div>
+        </div>
+        <div class="prod-info">
+          <p class="prod-brand">Sneaker Lab</p>
+          <h4 class="prod-name">Pro Cleaning Kit</h4>
+          <p class="prod-desc">Complete kit: specialist cleaner, brush, microfibre towel. Cleans & protects in one routine.</p>
+          <div class="prod-footer">
+            <div><div class="prod-stars">★★★★☆</div>
+            <div class="prod-price"><span class="old-price">€52</span>€39.99</div></div>
+            <button class="btn-red" style="padding:0.5rem 1rem;font-size:0.6rem;" onclick="addToCart('sl-kit','Sneaker Lab Pro Kit','Sneaker Lab',39.99,'🧪')">+ Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="prod-card fade-up" data-cat="cleaner">
+        <div class="prod-img-wrap">
+          <div class="prod-img-bg" style="background:linear-gradient(135deg,#0a0a1a,#12122a);">
+            <div class="prod-emoji">🫧</div>
+            <span class="prod-img-label">Reshoevn8r</span>
+          </div>
+          <div class="prod-quick" onclick="addToCart('r8r-sol','Reshoevn8r Sole Sauce','Reshoevn8r',19.99,'🫧')">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            Add to Cart
+          </div>
+        </div>
+        <div class="prod-info">
+          <p class="prod-brand">Reshoevn8r</p>
+          <h4 class="prod-name">Sole Sauce Whitener</h4>
+          <p class="prod-desc">Restore yellowed soles back to brilliant white. The secret weapon for vintage sneaker collectors.</p>
+          <div class="prod-footer">
+            <div><div class="prod-stars">★★★★★</div><div class="prod-price">€19.99</div></div>
+            <button class="btn-red" style="padding:0.5rem 1rem;font-size:0.6rem;" onclick="addToCart('r8r-sol','Reshoevn8r Sole Sauce','Reshoevn8r',19.99,'🫧')">+ Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="prod-card fade-up delay-1" data-cat="accessory">
+        <div class="prod-img-wrap">
+          <div class="prod-img-bg" style="background:linear-gradient(135deg,#1a0a12,#2a0a1a);">
+            <div class="prod-emoji">🧽</div>
+            <span class="prod-img-label">ShoeLab</span>
+          </div>
+          <span class="prod-badge">Exclusive</span>
+          <div class="prod-quick" onclick="addToCart('sl-cloth','ShoeLab Microfibre Cloth','ShoeLab',8.99,'🧽')">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            Add to Cart
+          </div>
+        </div>
+        <div class="prod-info">
+          <p class="prod-brand">ShoeLab Exclusive</p>
+          <h4 class="prod-name">Pro Microfibre Cloth</h4>
+          <p class="prod-desc">Ultra-soft, lint-free. Same cloth used in our studio. Leaves zero scratches or marks.</p>
+          <div class="prod-footer">
+            <div><div class="prod-stars">★★★★★</div><div class="prod-price">€8.99</div></div>
+            <button class="btn-red" style="padding:0.5rem 1rem;font-size:0.6rem;" onclick="addToCart('sl-cloth','ShoeLab Microfibre Cloth','ShoeLab',8.99,'🧽')">+ Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7 -->
+      <div class="prod-card fade-up delay-2" data-cat="protector">
+        <div class="prod-img-wrap">
+          <div class="prod-img-bg" style="background:linear-gradient(135deg,#001a0a,#002a10);">
+            <div class="prod-emoji">🌬️</div>
+            <span class="prod-img-label">Jason Markk</span>
+          </div>
+          <div class="prod-quick" onclick="addToCart('jm-repel','Jason Markk Repel','Jason Markk',18.99,'🌬️')">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            Add to Cart
+          </div>
+        </div>
+        <div class="prod-info">
+          <p class="prod-brand">Jason Markk</p>
+          <h4 class="prod-name">Repel Water + Stain</h4>
+          <p class="prod-desc">Premium water & stain repellent. Works on all materials without changing texture or look.</p>
+          <div class="prod-footer">
+            <div><div class="prod-stars">★★★★★</div><div class="prod-price">€18.99</div></div>
+            <button class="btn-red" style="padding:0.5rem 1rem;font-size:0.6rem;" onclick="addToCart('jm-repel','Jason Markk Repel','Jason Markk',18.99,'🌬️')">+ Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 8 -->
+      <div class="prod-card fade-up delay-3" data-cat="accessory">
+        <div class="prod-img-wrap">
+          <div class="prod-img-bg" style="background:linear-gradient(135deg,#1a1a0a,#2a2a08);">
+            <div class="prod-emoji">📦</div>
+            <span class="prod-img-label">Crep Protect</span>
+          </div>
+          <span class="prod-badge bundle">Value Pack</span>
+          <div class="prod-quick" onclick="addToCart('crep-wipes','Crep Protect Wipes 12pk','Crep Protect',12.99,'📦')">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            Add to Cart
+          </div>
+        </div>
+        <div class="prod-info">
+          <p class="prod-brand">Crep Protect</p>
+          <h4 class="prod-name">Cure Wipes 12-Pack</h4>
+          <p class="prod-desc">Pocket-sized instant clean wipes. Perfect for on-the-go touch-ups — no water needed.</p>
+          <div class="prod-footer">
+            <div><div class="prod-stars">★★★★☆</div><div class="prod-price">€12.99</div></div>
+            <button class="btn-red" style="padding:0.5rem 1rem;font-size:0.6rem;" onclick="addToCart('crep-wipes','Crep Protect Wipes 12pk','Crep Protect',12.99,'📦')">+ Cart</button>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /shop-grid -->
+  </div><!-- /section -->
+</section>
+
+<!-- CART FLOATING BUTTON -->
+<button class="cart-float" onclick="toggleCart()" title="View Cart">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+  <span class="cart-count" id="cartCount">0</span>
+</button>
+
+<!-- CART OVERLAY -->
+<div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+
+<!-- CART DRAWER -->
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-header">
+    <span class="cart-header-title">Your Cart</span>
+    <button class="cart-close-btn" onclick="toggleCart()">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <div class="cart-empty">
+      <div class="cart-empty-icon">🛒</div>
+      <p>Your cart is empty</p>
+      <p style="font-size:0.7rem;color:var(--muted);">Add some products above</p>
+    </div>
+  </div>
+  <div class="cart-footer" id="cartFooter" style="display:none;">
+    <div class="cart-subtotal">
+      <span class="cart-subtotal-label">Subtotal</span>
+      <span class="cart-subtotal-val" id="cartTotal">€0.00</span>
+    </div>
+    <p class="cart-shipping">🚚 Free shipping on orders over €50</p>
+    <button class="cart-checkout" onclick="checkout()">PROCEED TO CHECKOUT</button>
+    <button class="cart-continue" onclick="toggleCart()">Continue Shopping</button>
+  </div>
+</div>
+
+<!-- CART TOAST -->
+<div class="cart-toast" id="cartToast">
+  <span class="cart-toast-icon" id="toastIcon">🧴</span>
+  <div class="cart-toast-text">
+    <strong id="toastName">Product</strong>
+    Added to your cart
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="ft-brand">
+      <div class="ft-logo-row">
+        <img src="assets/images/logo.png" alt="ShoeLab" class="ft-logo-img"/>
+        <span class="ft-brand-name">ShoeLab<span>.de</span></span>
+      </div>
+      <p class="ft-tagline">Bremen's premier sneaker care lab. Every pair treated with precision, passion and pro-grade products.</p>
+      <div class="ft-socials" style="flex-direction:column;gap:0.6rem;margin-top:0.5rem;">
+        <a href="https://instagram.com/Shoelab.brnm" target="_blank" class="ft-social-brand">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          <span>ShoeLab Brmn</span>
+        </a>
+        <a href="https://tiktok.com/@shoelab.brnm" target="_blank" class="ft-social-brand">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.75a8.27 8.27 0 0 0 4.84 1.55V6.85a4.85 4.85 0 0 1-1.07-.16z"/></svg>
+          <span>ShoeLab Brmn</span>
+        </a>
+      </div>
+    </div>
+    <div>
+      <p class="ft-col-title">Navigation</p>
+      <ul class="ft-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#booking">Book Now</a></li>
+        <li><a href="#shop">Shop</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="ft-col-title">Services</p>
+      <ul class="ft-links">
+        <li><a href="#services">Basic Cleaning</a></li>
+        <li><a href="#services">Deep Cleaning</a></li>
+        <li><a href="#services">Sneaker Detailing</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="ft-col-title">Opening Hours</p>
+      <ul class="ft-hours">
+        <li><span>Mon – Fri</span><span>10:00 – 19:00</span></li>
+        <li><span>Saturday</span><span>10:00 – 16:00</span></li>
+        <li><span>Sunday</span><span>Closed</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="ft-copy">© 2025 ShoeLab.de · Bremen, Germany</p>
+    <div class="ft-legal">
+      <a href="#">Impressum</a>
+      <a href="#">Datenschutz</a>
+      <a href="#">AGB</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ══ WESLEY AI ASSISTANT ══ -->
+
+<!-- Launcher -->
+<div class="wesley-launcher" id="wesleyLauncher">
+  <div class="wesley-label" onclick="toggleWesley()" id="wesleyLabel">
+    Hi! I'm <span>Wesley</span> — Need help? 👋
+  </div>
+  <button class="wesley-btn" id="wesleyBtn" onclick="toggleWesley()" aria-label="Chat with Wesley">
+    <div class="wesley-pulse"></div>
+    <div class="wesley-pulse"></div>
+    <svg class="icon-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+    </svg>
+    <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+    </svg>
+    <span class="wesley-unread" id="wesleyUnread">1</span>
+  </button>
+</div>
+
+<!-- Chat Window -->
+<div class="wesley-window" id="wesleyWindow">
+
+  <!-- Header -->
+  <div class="wes-header">
+    <div class="wes-avatar">
+      🤖
+      <div class="wes-status-dot"></div>
+    </div>
+    <div class="wes-info">
+      <div class="wes-name">Wesley</div>
+      <div class="wes-role">ShoeLab AI Assistant · Always Online</div>
+    </div>
+    <div style="display:flex;align-items:center;gap:0.6rem;">
+      <span class="wes-badge">AI</span>
+      <div class="wes-header-actions">
+        <button class="wes-hbtn" onclick="clearChat()" title="Clear chat">↺</button>
+        <button class="wes-hbtn" onclick="toggleWesley()" title="Close">✕</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Messages -->
+  <div class="wes-messages" id="wesMessages"></div>
+
+  <!-- Quick Replies -->
+  <div class="wes-quick-replies" id="wesQuickReplies"></div>
+
+  <!-- Input -->
+  <div class="wes-input-area">
+    <div class="wes-input-row">
+      <textarea class="wes-input" id="wesInput" placeholder="Ask Wesley anything…" rows="1"
+        onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();sendMessage();}"
+        oninput="autoResize(this)"></textarea>
+      <button class="wes-send" onclick="sendMessage()" title="Send">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="22" y1="2" x2="11" y2="13"/>
+          <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+        </svg>
+      </button>
+    </div>
+    <div class="wes-input-hint">Press Enter to send · Shift+Enter for new line</div>
+  </div>
+  <div class="wes-powered">Powered by <span>ShoeLab AI</span> · Wesley v1.0</div>
+</div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
