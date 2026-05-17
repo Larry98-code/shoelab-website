@@ -2,13 +2,29 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+<meta name="theme-color" content="#080808"/>
+<meta name="description" content="ShoeLab.de — Bremen's premier shoe cleaning, restoration and detailing studio. Book online, shop pro-grade products."/>
 <title>ShoeLab.de — Premium Shoe Care · Bremen</title>
+
+<!-- Stripe -->
 <script src="https://js.stripe.com/v3/"></script>
+
+<!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+
 <style>
+
+@font-face { font-family: 'Bebas Neue'; font-display: swap; }
+@font-face { font-family: 'Inter'; font-display: swap; }
+/* ── CRITICAL: Prevent flash of unstyled content ── */
+html { background: #080808; }
+body { background: #080808; opacity: 0; transition: opacity 0.3s ease; }
+body.loaded { opacity: 1; }
+
+
 :root {
   --red: #CC1111;
   --red-bright: #FF2020;
@@ -1597,9 +1613,33 @@ footer{background:var(--black);border-top:1px solid rgba(204,17,17,0.25);}
   .cart-toast{right:0.5rem;bottom:0.5rem;min-width:auto;left:0.5rem;}
 }
 
+
+/* ── GALLERY ITEMS ── */
+.g-item { min-height: 200px; }
+.g-ph { min-height: 100%; position: relative; }
+
+/* ── NAV RED LINK ── */
+.nav-red { color: #CC1111 !important; }
+
+/* ── ADDITIONAL STABILITY FIXES ── */
+* { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+input, select, textarea, button { font-family: inherit; }
+img { max-width: 100%; height: auto; display: block; }
+
+/* ── GALLERY GRID FIX ── */
+@media(max-width:768px){
+  .gallery-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+  .g-item:first-child { grid-row: auto; }
+  .g-item { min-height: 180px; }
+}
+@media(max-width:480px){
+  .gallery-grid { grid-template-columns: 1fr; }
+  .g-item { min-height: 200px; }
+}
 </style>
 </head>
 <body>
+
 
 <!-- NAV -->
 <nav id="navbar">
@@ -1755,19 +1795,44 @@ footer{background:var(--black);border-top:1px solid rgba(204,17,17,0.25);}
   </div>
   <div class="gallery-grid">
     <div class="g-item fade-up">
-      <div class="g-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>Upload your best work</div>
+      <div class="g-ph" style="background:linear-gradient(135deg,#1a0a0a 0%,#2d0808 50%,#0a0a0a 100%);border:none;gap:1.5rem;">
+        <div style="font-size:4rem;filter:drop-shadow(0 0 30px rgba(204,17,17,0.6));">👟</div>
+        <div style="text-align:center;">
+          <div style="font-family:Bebas Neue,Arial Black,sans-serif;font-size:1.1rem;letter-spacing:0.15em;color:#fff;margin-bottom:0.3rem;">Before &amp; After</div>
+          <div style="font-size:0.6rem;letter-spacing:0.2em;color:rgba(204,17,17,0.7);">DEEP CLEAN</div>
+        </div>
+        <div style="position:absolute;bottom:1rem;right:1rem;font-size:0.55rem;letter-spacing:0.2em;color:rgba(255,255,255,0.2);text-transform:uppercase;">Upload your photos</div>
+      </div>
       <div class="g-overlay"><span class="g-tag">Deep Clean</span></div>
     </div>
     <div class="g-item fade-up delay-1">
-      <div class="g-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>Before &amp; After</div>
+      <div class="g-ph" style="background:linear-gradient(135deg,#0a0a1a 0%,#12123a 100%);border:none;gap:1.2rem;">
+        <div style="font-size:3rem;filter:drop-shadow(0 0 20px rgba(100,100,255,0.3));">✨</div>
+        <div style="text-align:center;">
+          <div style="font-family:Bebas Neue,Arial Black,sans-serif;font-size:1.1rem;letter-spacing:0.15em;color:#fff;margin-bottom:0.3rem;">Sneaker Detailing</div>
+          <div style="font-size:0.6rem;letter-spacing:0.2em;color:rgba(204,17,17,0.7);">THE AUTOPSY</div>
+        </div>
+      </div>
       <div class="g-overlay"><span class="g-tag">Detailing</span></div>
     </div>
     <div class="g-item fade-up delay-2">
-      <div class="g-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>Sneaker Restore</div>
+      <div class="g-ph" style="background:linear-gradient(135deg,#0a1a0a 0%,#0f2a0f 100%);border:none;gap:1.2rem;">
+        <div style="font-size:3rem;filter:drop-shadow(0 0 20px rgba(34,180,80,0.4));">🔬</div>
+        <div style="text-align:center;">
+          <div style="font-family:Bebas Neue,Arial Black,sans-serif;font-size:1.1rem;letter-spacing:0.15em;color:#fff;margin-bottom:0.3rem;">Full Restoration</div>
+          <div style="font-size:0.6rem;letter-spacing:0.2em;color:rgba(34,180,80,0.7);">THE REVIVAL</div>
+        </div>
+      </div>
       <div class="g-overlay"><span class="g-tag">Restoration</span></div>
     </div>
     <div class="g-item fade-up delay-3">
-      <div class="g-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>Sneaker Collection</div>
+      <div class="g-ph" style="background:linear-gradient(135deg,#1a1000 0%,#2a1800 100%);border:none;gap:1.2rem;">
+        <div style="font-size:3rem;filter:drop-shadow(0 0 20px rgba(255,180,0,0.3));">🧴</div>
+        <div style="text-align:center;">
+          <div style="font-family:Bebas Neue,Arial Black,sans-serif;font-size:1.1rem;letter-spacing:0.15em;color:#fff;margin-bottom:0.3rem;">The Refresh</div>
+          <div style="font-size:0.6rem;letter-spacing:0.2em;color:rgba(204,17,17,0.7);">BASIC CLEAN</div>
+        </div>
+      </div>
       <div class="g-overlay"><span class="g-tag">Basic Clean</span></div>
     </div>
   </div>
@@ -3476,5 +3541,815 @@ function showNotif(message, type) {
   <div class="wes-powered">Powered by <span>ShoeLab AI</span> · Wesley v1.0</div>
 </div>
 
+
+<script>
+
+// ── Prevent flash of unstyled content ──────────────────────────
+document.addEventListener('DOMContentLoaded', function() {
+  document.body.classList.add('loaded');
+});
+
+const navbar=document.getElementById('navbar');
+window.addEventListener('scroll',()=>navbar.classList.toggle('scrolled',scrollY>60));
+document.getElementById('hamburger').addEventListener('click',()=>document.getElementById('mobMenu').classList.add('open'));
+document.getElementById('mobClose').addEventListener('click',closeMob);
+function closeMob(){document.getElementById('mobMenu').classList.remove('open');}
+const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');}),{threshold:0.1});
+document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
+function handleBook(btn){
+  btn.textContent='Sending…';btn.style.background='#881010';
+  setTimeout(()=>{btn.textContent='✓ BOOKED — WE\'LL CONFIRM SHORTLY';btn.style.background='#1a5c1a';},1500);
+}
+document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{
+  const t=document.querySelector(a.getAttribute('href'));
+  if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});}
+}));
+
+// ── SHOP CART ──────────────────────────────────────────
+let cart = {};
+
+function addToCart(id, name, brand, price, emoji) {
+  if (cart[id]) {
+    cart[id].qty += 1;
+  } else {
+    cart[id] = { id, name, brand, price, emoji, qty: 1 };
+  }
+  updateCartUI();
+  showToast(name, emoji);
+}
+
+function removeFromCart(id) {
+  delete cart[id];
+  updateCartUI();
+}
+
+function changeQty(id, delta) {
+  if (!cart[id]) return;
+  cart[id].qty += delta;
+  if (cart[id].qty <= 0) delete cart[id];
+  updateCartUI();
+}
+
+function updateCartUI() {
+  const items = Object.values(cart);
+  const totalQty = items.reduce((s, i) => s + i.qty, 0);
+  const totalPrice = items.reduce((s, i) => s + i.price * i.qty, 0);
+
+  // count badge
+  const countEl = document.getElementById('cartCount');
+  countEl.textContent = totalQty;
+  countEl.classList.remove('bump');
+  void countEl.offsetWidth;
+  countEl.classList.add('bump');
+
+  // items list
+  const el = document.getElementById('cartItems');
+  const footer = document.getElementById('cartFooter');
+
+  if (items.length === 0) {
+    el.innerHTML = '<div class="cart-empty"><div class="cart-empty-icon">🛒</div><p>Your cart is empty</p><p style="font-size:0.7rem;color:var(--muted);">Add some products above</p></div>';
+    footer.style.display = 'none';
+  } else {
+    el.innerHTML = items.map(i => `
+      <div class="cart-item">
+        <div class="cart-item-emoji">${i.emoji}</div>
+        <div class="cart-item-info">
+          <div class="cart-item-brand">${i.brand}</div>
+          <div class="cart-item-name">${i.name}</div>
+          <div class="cart-item-qty">
+            <button class="qty-btn" onclick="changeQty('${i.id}',-1)">−</button>
+            <span class="qty-num">${i.qty}</span>
+            <button class="qty-btn" onclick="changeQty('${i.id}',1)">+</button>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:flex-end;gap:0.5rem;">
+          <div class="cart-item-price">€${(i.price * i.qty).toFixed(2)}</div>
+          <button class="cart-item-remove" onclick="removeFromCart('${i.id}')" title="Remove">✕</button>
+        </div>
+      </div>
+    `).join('');
+    footer.style.display = 'block';
+    document.getElementById('cartTotal').textContent = '€' + totalPrice.toFixed(2);
+  }
+}
+
+function toggleCart() {
+  document.getElementById('cartDrawer').classList.toggle('open');
+  document.getElementById('cartOverlay').classList.toggle('open');
+}
+
+let toastTimer;
+function showToast(name, emoji) {
+  const t = document.getElementById('cartToast');
+  document.getElementById('toastName').textContent = name;
+  document.getElementById('toastIcon').textContent = emoji;
+  t.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.classList.remove('show'), 2800);
+}
+
+function filterProducts(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.prod-card').forEach(card => {
+    const match = cat === 'all' || card.dataset.cat === cat;
+    card.style.display = match ? 'flex' : 'none';
+  });
+}
+
+function checkout() {
+  const drawer = document.getElementById('cartDrawer');
+  const footer = document.getElementById('cartFooter');
+  const btn = footer.querySelector('.cart-checkout');
+  btn.textContent = '✓ ORDER SENT — WE\'LL CONFIRM SHORTLY!';
+  btn.style.background = '#1a5c1a';
+  setTimeout(() => {
+    cart = {};
+    updateCartUI();
+    drawer.classList.remove('open');
+    document.getElementById('cartOverlay').classList.remove('open');
+    btn.textContent = 'PROCEED TO CHECKOUT';
+    btn.style.background = '';
+  }, 2500);
+}
+
+
+
+// ══ WESLEY AI ASSISTANT ══════════════════════════════════
+const ANTHROPIC_ENDPOINT = "https://api.anthropic.com/v1/messages";
+
+const WESLEY_SYSTEM = `You are Wesley, the friendly and professional AI assistant for ShoeLab.de — a premium shoe cleaning and detailing studio based in Bremen, Germany.
+
+Your personality: warm, knowledgeable, professional but approachable. You speak clearly and concisely. You're passionate about sneakers and shoe care.
+
+About ShoeLab.de:
+- Location: Bremen, Germany (address to be confirmed by owner)
+- Phone/WhatsApp: +49 177 2258878
+- Email: Shoelab.de@gmail.com
+- Instagram: @Shoelab.brnm (handle: ShoeLab Brmn)
+- TikTok: ShoeLab Brmn
+- Opening hours: Monday–Friday 10:00–19:00, Saturday 10:00–16:00, Sunday closed
+
+Services offered (exclusive ShoeLab brand names):
+1. The ShoeLab Refresh — from €18/pair (one-time) or €14/month (Formula 01): exterior clean, sole wipe, lace cleaning, protective spray. Tagline: "Back to baseline. Clean, sharp, ready."
+2. The ShoeLab Revival — from €35/pair (one-time) or €27/month (Formula 02): full disassembly, stain & scuff removal, interior deodorising, conditioning, sole re-whitening. Tagline: "We bring the dead back to life."
+3. The ShoeLab Autopsy — from €60/pair (one-time) or €47/month (Formula 03 VIP): premium deep clean, crease treatment, paint pen touch-up, UV coating, museum-grade finish. Tagline: "Every layer examined. Every flaw erased."
+
+Monthly subscription plans:
+- ShoeLab Formula 01 — €14/month (Basic Clean, priority booking, cancel anytime)
+- ShoeLab Formula 02 — €27/month (Deep Clean, priority booking, free deodoriser, cancel anytime)
+- ShoeLab Formula 03 — VIP — €47/month (Full Detailing, VIP priority, free product quarterly, cancel anytime)
+
+Shop products (exclusive ShoeLab branded names):
+- Lab Serum No.1 (Jason Markk Cleaner) — €16.99 — "The original formula. Nothing cleans like this."
+- The ShoeLab Scalpel Set (Reshoevn8r Brushes) — €24.99 — "Three blades. One mission."
+- ShoeLab ShieldX (Crep Protect Spray) — €14.99 — "Invisible armour. Nano-tech protection."
+- The ShoeLab Field Kit (Sneaker Lab Kit) — €39.99 — "Everything the lab uses. Now in your hands."
+- ShoeLab WhiteOut (Reshoevn8r Sole Sauce) — €19.99 — "The resurrection of every sole."
+- ShoeLab Skin (Microfibre Cloth) — €8.99 — "Touch so soft, it whispers."
+- ShoeLab Ghost Guard (Jason Markk Repel) — €18.99 — "They won't see it. Stains will feel it."
+- ShoeLab QuickDose (Crep Wipes 12pk) — €12.99 — "12 hits of clean. Pocket-sized power."
+- The ShoeLab Genesis Kit (Starter Bundle) — €49.99 — "Where your sneaker care story begins." (saves €18)
+- Free shipping on orders over €50
+
+Booking: Customers can book online via the booking section on the website. They choose a service, date, time slot (10:00–18:00 weekdays, 10:00–16:00 Saturday), and leave their name, contact, and shoe details. Confirmation within 24 hours. No payment required at booking. Free cancellation up to 24 hours before.
+
+You can help with:
+- Navigating the website (services, shop, gallery, booking, contact)
+- Recommending the right cleaning service for their shoe type/condition
+- Recommending the right products from the shop
+- Explaining what each service includes
+- Helping with booking questions
+- Answering questions about opening hours, location, contact info
+- Giving shoe care tips and advice
+- Explaining product details
+
+Always be helpful, brief, and clear. Use short paragraphs. When recommending a service or product, be specific. Never make up information not listed above. If you don't know something, say you'll pass the question to the team and suggest they email or WhatsApp.
+
+End messages with a helpful follow-up question or CTA when appropriate. Respond in the same language the customer uses (English or German).`;
+
+let wesleyOpen = false;
+let wesMessages = [];
+let welcomeSent = false;
+let isTyping = false;
+
+const quickReplySets = {
+  welcome: [
+    "Book an appointment",
+    "View services & prices",
+    "Shop cleaning products",
+    "Opening hours",
+    "Contact the team"
+  ],
+  services: [
+    "Basic Cleaning — €18",
+    "Deep Clean — €35",
+    "Sneaker Detailing — €60",
+    "Which service for my shoes?"
+  ],
+  booking: [
+    "How do I book?",
+    "What info do I need?",
+    "Can I cancel?",
+    "Opening hours"
+  ],
+  shop: [
+    "Best seller products",
+    "Do you ship?",
+    "Starter Kit bundle",
+    "Protector sprays"
+  ]
+};
+
+function toggleWesley() {
+  wesleyOpen = !wesleyOpen;
+  document.getElementById('wesleyWindow').classList.toggle('open', wesleyOpen);
+  document.getElementById('wesleyBtn').classList.toggle('open', wesleyOpen);
+  const label = document.getElementById('wesleyLabel');
+  const unread = document.getElementById('wesleyUnread');
+
+  if (wesleyOpen) {
+    label.style.display = 'none';
+    unread.style.display = 'none';
+    if (!welcomeSent) {
+      welcomeSent = true;
+      setTimeout(() => sendWesleyGreeting(), 400);
+    }
+    setTimeout(() => {
+      const input = document.getElementById('wesInput');
+      if (input) input.focus();
+    }, 400);
+  } else {
+    label.style.display = 'block';
+  }
+}
+
+function sendWesleyGreeting() {
+  const hour = new Date().getHours();
+  let greeting = hour < 12 ? "Good morning" : hour < 17 ? "Good afternoon" : "Good evening";
+  addWesleyMessage(`${greeting}! 👟 Welcome to **ShoeLab.de** — Bremen's premier shoe care studio.\n\nI'm **Wesley**, your personal AI assistant. I can help you with booking appointments, choosing the right service for your shoes, shopping for pro-grade cleaning products, or anything else you need.\n\nHow can I help you today?`, 'bot', quickReplySets.welcome);
+}
+
+function addWesleyMessage(text, sender, quickReplies = []) {
+  const container = document.getElementById('wesMessages');
+  const now = new Date().toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'});
+
+  const msg = document.createElement('div');
+  msg.className = `wes-msg ${sender === 'user' ? 'user' : ''}`;
+
+  const avatarHTML = sender === 'bot'
+    ? `<div class="wes-msg-avatar">🤖</div>`
+    : `<div class="wes-msg-avatar">👤</div>`;
+
+  // Parse simple markdown: **bold**, newlines
+  let formatted = text
+    .replace(/\*\*(.*?)\*\*/g, '<strong style="color:var(--white)">$1</strong>')
+    .replace(/\n/g, '<br>');
+
+  msg.innerHTML = `
+    ${sender === 'bot' ? avatarHTML : ''}
+    <div class="wes-bubble">
+      ${formatted}
+      <span class="wes-bubble-time">${now}</span>
+    </div>
+    ${sender === 'user' ? avatarHTML : ''}
+  `;
+
+  container.appendChild(msg);
+  container.scrollTop = container.scrollHeight;
+
+  // quick replies
+  const qrContainer = document.getElementById('wesQuickReplies');
+  qrContainer.innerHTML = '';
+  if (quickReplies.length > 0) {
+    quickReplies.forEach(qr => {
+      const btn = document.createElement('button');
+      btn.className = 'qr-btn';
+      btn.textContent = qr;
+      btn.onclick = () => {
+        qrContainer.innerHTML = '';
+        handleUserMessage(qr);
+      };
+      qrContainer.appendChild(btn);
+    });
+  }
+}
+
+function showTyping() {
+  const container = document.getElementById('wesMessages');
+  const el = document.createElement('div');
+  el.className = 'wes-typing'; el.id = 'wesTyping';
+  el.innerHTML = `
+    <div class="wes-msg-avatar" style="width:28px;height:28px;background:linear-gradient(135deg,#CC1111,#660808);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.75rem;">🤖</div>
+    <div class="wes-typing-dots"><span></span><span></span><span></span></div>
+  `;
+  container.appendChild(el);
+  container.scrollTop = container.scrollHeight;
+}
+
+function removeTyping() {
+  const el = document.getElementById('wesTyping');
+  if (el) el.remove();
+}
+
+async function sendMessage() {
+  const input = document.getElementById('wesInput');
+  const text = input.value.trim();
+  if (!text || isTyping) return;
+  input.value = '';
+  input.style.height = 'auto';
+  handleUserMessage(text);
+}
+
+async function handleUserMessage(text) {
+  if (isTyping) return;
+
+  // clear quick replies
+  document.getElementById('wesQuickReplies').innerHTML = '';
+
+  // add user message
+  addWesleyMessage(text, 'user');
+  wesMessages.push({ role: 'user', content: text });
+  isTyping = true;
+
+  // show typing
+  showTyping();
+
+  try {
+    const response = await fetch(ANTHROPIC_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 1000,
+        system: WESLEY_SYSTEM,
+        messages: wesMessages
+      })
+    });
+
+    const data = await response.json();
+    removeTyping();
+
+    const reply = data.content && data.content[0] && data.content[0].text
+      ? data.content[0].text
+      : "I'm having a moment — please try again or contact us at Shoelab.de@gmail.com 🙏";
+
+    wesMessages.push({ role: 'assistant', content: reply });
+
+    // pick contextual quick replies
+    const lc = text.toLowerCase();
+    let qr = [];
+    if (lc.includes('book') || lc.includes('appointment') || lc.includes('reserv')) qr = quickReplySets.booking;
+    else if (lc.includes('service') || lc.includes('clean') || lc.includes('price') || lc.includes('cost')) qr = quickReplySets.services;
+    else if (lc.includes('shop') || lc.includes('product') || lc.includes('buy') || lc.includes('order')) qr = quickReplySets.shop;
+
+    addWesleyMessage(reply, 'bot', qr);
+
+  } catch (err) {
+    removeTyping();
+    addWesleyMessage("I'm having trouble connecting right now. Please reach us directly:\n📱 **WhatsApp:** +49 177 2258878\n📧 **Email:** Shoelab.de@gmail.com", 'bot');
+  }
+
+  isTyping = false;
+}
+
+function clearChat() {
+  wesMessages = [];
+  document.getElementById('wesMessages').innerHTML = '';
+  document.getElementById('wesQuickReplies').innerHTML = '';
+  welcomeSent = false;
+  setTimeout(() => sendWesleyGreeting(), 300);
+}
+
+function autoResize(el) {
+  el.style.height = 'auto';
+  el.style.height = Math.min(el.scrollHeight, 100) + 'px';
+}
+
+// Auto-show label after 3s
+setTimeout(() => {
+  if (!wesleyOpen) {
+    const label = document.getElementById('wesleyLabel');
+    if (label) { label.style.display = 'none'; setTimeout(() => { label.style.display = 'block'; }, 100); }
+  }
+}, 3000);
+
+
+// ══ STRIPE PAYMENT SYSTEM — CUSTOM UI ════════════════════════
+
+const STRIPE_PUBLISHABLE_KEY = 'pk_test_51TQRLyLM3UVKKIQN5THfuSMkt9Yy0RRS4qurwLH7UhCO4RsqCy4qzB2QL2c57EzeunGsXpJrglunayLLrBmsVJch00oF51z0PH';
+
+const STRIPE_PRICES = {
+  onetime: {
+    'The ShoeLab Refresh':  'price_1TQadFLM3UVKKIQNNCMkUTWp',
+    'The ShoeLab Revival':  'price_1TQaeOLM3UVKKIQNtpWFiSg8',
+    'The ShoeLab Autopsy':  'price_1TQafTLM3UVKKIQNQaAhsyYU',
+  },
+  subscription: {
+    'ShoeLab Formula 01':       'price_1TQah2LM3UVKKIQNvFXbrlF5',
+    'ShoeLab Formula 02':       'price_1TQai5LM3UVKKIQNEGOzay6Y',
+    'ShoeLab Formula 03 — VIP': 'price_1TQakHLM3UVKKIQNypgf7RN7',
+  },
+  shop: {
+    'jm-cleaner':  'price_1TQb6lLM3UVKKIQNXiOGMK8n',
+    'r8r-brush':   'price_1TQb8JLM3UVKKIQNEkmdfAHW',
+    'crep-spray':  'price_1TQb98LM3UVKKIQN7BMmzTQF',
+    'sl-kit':      'price_1TQbA9LM3UVKKIQNoDzDK0U9',
+    'r8r-sol':     'price_1TQbB4LM3UVKKIQNAVGuz75V',
+    'sl-cloth':    'price_1TQbBpLM3UVKKIQNWH3hWEFz',
+    'jm-repel':    'price_1TQbCiLM3UVKKIQNXo7s6CIh',
+    'crep-wipes':  'price_1TQbDYLM3UVKKIQNGEPGy4pX',
+    'starter-kit': 'price_1TQbEYLM3UVKKIQNwa5JTsNG',
+  }
+};
+
+// ── State ──────────────────────────────────────────────────────
+let payState = {
+  step: 1,
+  serviceName: '',
+  servicePrice: '',
+  paymentType: 'onetime',
+  method: 'card',
+  isShopOrder: false,
+  shopItems: [],
+};
+
+let currentPaymentType = 'onetime';
+let selectedPlanId = null, selectedPlanName = '', selectedPlanPrice = '';
+let modalServiceName = '', modalServicePrice = '', modalPaymentType = '';
+
+// ── Booking form toggles ───────────────────────────────────────
+function setPaymentType(type) {
+  currentPaymentType = type;
+  const isSub = type === 'subscription';
+  document.getElementById('ptOneTime').classList.toggle('active', !isSub);
+  document.getElementById('ptSubscribe').classList.toggle('active', isSub);
+  document.getElementById('subPlans').classList.toggle('visible', isSub);
+  document.getElementById('serviceSelectWrap').style.display = isSub ? 'none' : 'block';
+  selectedPlanId = null;
+  document.getElementById('bookingSummary').classList.remove('show');
+  document.getElementById('payBtnText').textContent = isSub ? 'START MONTHLY PLAN' : 'CONFIRM & PAY SECURELY';
+  if (!isSub) updateBookingSummary();
+}
+
+function selectPlan(planId, name, priceStr, amount, savings) {
+  document.querySelectorAll('.sub-plan').forEach(p => p.classList.remove('selected'));
+  document.getElementById('plan-' + planId).classList.add('selected');
+  selectedPlanId = planId; selectedPlanName = name; selectedPlanPrice = priceStr;
+  const savingsEl = document.getElementById('subSavings');
+  savingsEl.textContent = '✦ ' + savings + ' vs one-time booking';
+  savingsEl.classList.add('show');
+  const summary = document.getElementById('bookingSummary');
+  summary.classList.add('show');
+  document.getElementById('bsSvcName').textContent = name;
+  document.getElementById('bsSvcPrice').textContent = priceStr;
+  document.getElementById('bsType').textContent = 'Monthly Subscription';
+  document.getElementById('bsDiscount').innerHTML = '<span style="color:#22b450;font-size:0.7rem;">' + savings + '</span>';
+  document.getElementById('bsTotal').textContent = priceStr + ' billed monthly';
+  document.getElementById('payBtnText').textContent = 'START ' + name.toUpperCase();
+}
+
+function updateBookingSummary() {
+  const serviceEl = document.getElementById('bkService');
+  if (!serviceEl || !serviceEl.value) return;
+  const [svcId, price] = serviceEl.value.split('|');
+  const svcName = serviceEl.options[serviceEl.selectedIndex].text.split('\u2014')[0].trim();
+  document.getElementById('bookingSummary').classList.add('show');
+  document.getElementById('bsSvcName').textContent = svcName;
+  document.getElementById('bsSvcPrice').textContent = '\u20ac' + price;
+  document.getElementById('bsType').textContent = 'One-Time Payment';
+  document.getElementById('bsDiscount').textContent = '';
+  document.getElementById('bsTotal').textContent = '\u20ac' + price;
+  document.getElementById('payBtnText').textContent = 'PAY \u20ac' + price + ' SECURELY';
+}
+
+function initiateStripePayment() {
+  if (currentPaymentType === 'subscription') {
+    if (!selectedPlanId) { showNotif('Please select a monthly plan first', 'error'); return; }
+    const fn = document.getElementById('bkFirstName').value.trim();
+    const em = document.getElementById('bkEmail').value.trim();
+    if (!fn || !em) { showNotif('Please fill in your name and email first', 'error'); return; }
+    openPayModal(selectedPlanName, selectedPlanPrice.replace('\u20ac','').split('/')[0].trim(), 'subscription');
+  } else {
+    const svc = document.getElementById('bkService').value;
+    if (!svc) { showNotif('Please select a service first', 'error'); return; }
+    const [svcId, price] = svc.split('|');
+    const svcName = document.getElementById('bkService').options[document.getElementById('bkService').selectedIndex].text.split('\u2014')[0].trim();
+    openPayModal(svcName, price, 'onetime');
+  }
+  // Pre-fill from booking form
+  setTimeout(() => {
+    const fn = document.getElementById('bkFirstName').value;
+    const ln = document.getElementById('bkLastName').value;
+    const em = document.getElementById('bkEmail').value;
+    const ph = document.getElementById('bkPhone').value;
+    const nt = document.getElementById('bkNotes').value;
+    if (fn) document.getElementById('pFirstName').value = fn;
+    if (ln) document.getElementById('pLastName').value = ln;
+    if (em) document.getElementById('pEmail').value = em;
+    if (ph) document.getElementById('pPhone').value = ph;
+    if (nt) document.getElementById('pNotes').value = nt;
+  }, 100);
+}
+
+// ── Open modal ─────────────────────────────────────────────────
+function openPayModal(serviceName, price, paymentType, isShop, shopItems) {
+  payState.serviceName = serviceName;
+  payState.servicePrice = price;
+  payState.paymentType = paymentType;
+  payState.isShopOrder = isShop || false;
+  payState.shopItems = shopItems || [];
+  payState.step = 1;
+  payState.method = 'card';
+
+  const isSub = paymentType === 'subscription';
+  const priceNum = parseFloat(price);
+  const priceLabel = '\u20ac' + priceNum.toFixed(2);
+
+  // Header
+  document.getElementById('payTitle').textContent = isShop ? 'Shop Checkout' : (isSub ? 'Start Your Plan' : 'Secure Checkout');
+  document.getElementById('paySubtitle').textContent = 'Powered by Stripe \u00b7 256-bit SSL encryption';
+
+  // Order strip
+  document.getElementById('payOrderName').textContent = serviceName;
+  const typeEl = document.getElementById('payOrderType');
+  typeEl.textContent = isSub ? '\uD83D\uDD04 Monthly Subscription' : (isShop ? 'One-Time Purchase' : 'One-Time Service');
+  typeEl.className = 'pay-order-type ' + (isSub ? 'subscription' : 'onetime');
+  document.getElementById('payOrderPrice').textContent = priceLabel;
+  document.getElementById('payOrderPeriod').textContent = isSub ? 'billed monthly \u00b7 cancel anytime' : 'one-time payment';
+
+  // Notes field visibility
+  document.getElementById('pNotesWrap').style.display = isShop ? 'none' : 'block';
+
+  // Show step indicator or hide for shop
+  document.getElementById('paySteps').style.display = 'flex';
+
+  // Reset panels
+  goToStepDirect(1);
+  resetForm();
+
+  // Open
+  document.getElementById('payOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  setTimeout(() => { document.getElementById('pFirstName').focus(); }, 400);
+}
+
+function closePayModal() {
+  document.getElementById('payOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+  setTimeout(() => {
+    goToStepDirect(1);
+    document.getElementById('paySuccess').classList.remove('show');
+    document.querySelectorAll('.pay-panel').forEach(p => p.classList.remove('active'));
+    document.getElementById('panel1').classList.add('active');
+  }, 400);
+}
+
+document.getElementById('payOverlay').addEventListener('click', function(e) {
+  if (e.target === this) closePayModal();
+});
+
+// ── Step navigation ────────────────────────────────────────────
+function goToStep(step) {
+  if (step === 2) {
+    const fn = document.getElementById('pFirstName').value.trim();
+    const em = document.getElementById('pEmail').value.trim();
+    if (!fn) { highlightField('pFirstName'); showNotif('Please enter your first name', 'error'); return; }
+    if (!em || !em.includes('@')) { highlightField('pEmail'); showNotif('Please enter a valid email', 'error'); return; }
+  }
+  if (step === 3) {
+    if (payState.method === 'card') {
+      const num = document.getElementById('cardNumber').value.replace(/\s/g,'');
+      const exp = document.getElementById('cardExpiry').value;
+      const cvc = document.getElementById('cardCvc').value;
+      const nm  = document.getElementById('cardName').value.trim();
+      if (num.length < 16) { highlightField('cardNumber'); showNotif('Please enter a valid card number', 'error'); return; }
+      if (!exp || exp.length < 5) { showNotif('Please enter card expiry date', 'error'); return; }
+      if (!cvc || cvc.length < 3) { showNotif('Please enter card CVC', 'error'); return; }
+      if (!nm) { highlightField('cardName'); showNotif('Please enter cardholder name', 'error'); return; }
+    }
+    // Populate confirm screen
+    document.getElementById('confirmService').textContent = payState.serviceName;
+    document.getElementById('confirmType').textContent = payState.paymentType === 'subscription' ? 'Monthly Subscription' : 'One-Time Payment';
+    document.getElementById('confirmName').textContent = document.getElementById('pFirstName').value + ' ' + document.getElementById('pLastName').value;
+    document.getElementById('confirmEmail').textContent = document.getElementById('pEmail').value;
+    document.getElementById('confirmTotal').textContent = '\u20ac' + parseFloat(payState.servicePrice).toFixed(2) + (payState.paymentType === 'subscription' ? '/month' : '');
+    const methodNames = { card: 'Credit / Debit Card', sepa: 'SEPA Direct Debit', paypal: 'PayPal' };
+    document.getElementById('confirmPayMethod').textContent = methodNames[payState.method] || 'Card';
+    const isSub = payState.paymentType === 'subscription';
+    document.getElementById('confirmRecurring').style.display = isSub ? 'block' : 'none';
+    document.getElementById('subTerms').style.display = isSub ? 'inline' : 'none';
+    document.getElementById('payCtaText').textContent = isSub
+      ? 'START PLAN \u00b7 \u20ac' + parseFloat(payState.servicePrice).toFixed(2) + '/MO'
+      : 'PAY \u20ac' + parseFloat(payState.servicePrice).toFixed(2) + ' SECURELY';
+  }
+  goToStepDirect(step);
+}
+
+function goToStepDirect(step) {
+  payState.step = step;
+  document.querySelectorAll('.pay-panel').forEach((p,i) => {
+    p.classList.toggle('active', i === step - 1);
+  });
+  // Update step indicators
+  ['step1','step2','step3'].forEach((id, i) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.classList.remove('active','done');
+    if (i + 1 === step) el.classList.add('active');
+    else if (i + 1 < step) el.classList.add('done');
+  });
+  // Scroll modal to top
+  const modal = document.getElementById('payModal');
+  if (modal) modal.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// ── Payment method switch ──────────────────────────────────────
+function switchMethod(method) {
+  payState.method = method;
+  ['card','sepa','paypal'].forEach(m => {
+    document.getElementById('tab' + m.charAt(0).toUpperCase() + m.slice(1)).classList.toggle('active', m === method);
+    const el = document.getElementById('method' + m.charAt(0).toUpperCase() + m.slice(1));
+    if (el) el.style.display = (m === method && m !== 'card') ? 'block' : 'none';
+  });
+  document.getElementById('methodCard').style.display = method === 'card' ? 'block' : 'none';
+}
+
+// ── Card formatting ────────────────────────────────────────────
+function formatCardNumber(input) {
+  let v = input.value.replace(/\D/g,'').substring(0,16);
+  input.value = v.replace(/(.{4})/g,'$1  ').trim();
+  // Detect card brand
+  const visa = /^4/; const mc = /^5[1-5]/;
+  document.getElementById('brandVisa').classList.toggle('active', visa.test(v));
+  document.getElementById('brandMC').classList.toggle('active', mc.test(v));
+}
+
+function formatExpiry(input) {
+  let v = input.value.replace(/\D/g,'').substring(0,4);
+  if (v.length >= 2) v = v.substring(0,2) + ' / ' + v.substring(2);
+  input.value = v;
+}
+
+// ── Express pay ────────────────────────────────────────────────
+function handleExpressPay(method) {
+  showNotif(method === 'apple' ? 'Apple Pay launching…' : 'Google Pay launching…', 'info');
+  setTimeout(() => processPayment(), 1500);
+}
+
+// ── Process payment ────────────────────────────────────────────
+function processPayment() {
+  const btn = document.getElementById('payCta');
+  btn.classList.add('processing');
+  btn.innerHTML = '<div class="pay-spinner"></div><span>Processing…</span>';
+
+  const isSub = payState.paymentType === 'subscription';
+  const email = document.getElementById('pEmail').value;
+  const firstName = document.getElementById('pFirstName').value;
+
+  // ── STRIPE LIVE CHECKOUT ────────────────────────────────────
+  const stripe = Stripe(STRIPE_PUBLISHABLE_KEY);
+
+  let priceId;
+  if (payState.isShopOrder) {
+    // Shop: use first item's price (multi-item handled via line_items)
+    const lineItems = payState.shopItems.map(i => ({ price: STRIPE_PRICES.shop[i.id], quantity: i.qty }));
+    stripe.redirectToCheckout({
+      lineItems,
+      mode: 'payment',
+      successUrl: window.location.origin + '?payment=success&type=shop',
+      cancelUrl: window.location.origin + '?payment=cancelled',
+      customerEmail: email,
+    }).then(result => {
+      if (result.error) {
+        showNotif(result.error.message, 'error');
+        resetPayBtn();
+      }
+    });
+    return;
+  }
+
+  priceId = STRIPE_PRICES[isSub ? 'subscription' : 'onetime'][payState.serviceName];
+  if (!priceId) { showNotif('Price not found — contact us directly', 'error'); resetPayBtn(); return; }
+
+  stripe.redirectToCheckout({
+    lineItems: [{ price: priceId, quantity: 1 }],
+    mode: isSub ? 'subscription' : 'payment',
+    successUrl: window.location.origin + '?payment=success&name=' + encodeURIComponent(firstName) + '&service=' + encodeURIComponent(payState.serviceName) + '&price=' + payState.servicePrice + '&sub=' + (isSub ? '1' : '0'),
+    cancelUrl: window.location.origin + '?payment=cancelled',
+    customerEmail: email,
+  }).then(result => {
+    if (result.error) {
+      showNotif(result.error.message, 'error');
+      resetPayBtn();
+    }
+  });
+}
+
+function resetPayBtn() {
+  const btn = document.getElementById('payCta');
+  btn.classList.remove('processing');
+  const isSub = payState.paymentType === 'subscription';
+  btn.innerHTML = '<svg class="pay-cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg><span id="payCtaText">' + (isSub ? 'START PLAN' : 'PAY SECURELY') + '</span><span class="pay-cta-lock">\uD83D\uDD12</span>';
+}
+
+// ── Check URL for Stripe return ───────────────────────────────
+(function checkPaymentReturn() {
+  const p = new URLSearchParams(window.location.search);
+  if (p.get('payment') === 'success') {
+    const name    = p.get('name') || 'Customer';
+    const service = p.get('service') || 'Your Order';
+    const price   = p.get('price') || '';
+    const isSub   = p.get('sub') === '1';
+    const type    = p.get('type');
+    setTimeout(() => showSuccessScreen(name, service, price, isSub, type === 'shop'), 400);
+  }
+  if (p.get('payment') === 'cancelled') {
+    setTimeout(() => showNotif('Payment was cancelled. Try again anytime.', 'error'), 400);
+  }
+})();
+
+function showSuccessScreen(name, service, price, isSub, isShop) {
+  // Generate reference number
+  const ref = 'SL-' + Date.now().toString(36).toUpperCase().slice(-6);
+
+  // Open modal in success state
+  document.getElementById('payOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  document.getElementById('paySteps').style.display = 'none';
+  document.querySelectorAll('.pay-panel').forEach(p => p.classList.remove('active'));
+  document.getElementById('payTitle').textContent = isSub ? 'You\'re Subscribed!' : 'Payment Confirmed!';
+  document.getElementById('paySubtitle').textContent = 'Thank you, ' + name + '!';
+
+  document.getElementById('successTitle').textContent = isSub ? 'Subscription Active!' : 'Payment Confirmed!';
+  document.getElementById('successSub').textContent = isSub
+    ? 'Your ' + service + ' plan is now active. We\'ll contact you to schedule your first appointment.'
+    : isShop
+    ? 'Your order is confirmed. We\'ll pack and ship your ShoeLab products shortly.'
+    : 'Your booking is locked in. We\'ll WhatsApp you within the hour to confirm your slot.';
+  document.getElementById('successService').textContent = service;
+  document.getElementById('successAmount').textContent = price ? '\u20ac' + parseFloat(price).toFixed(2) + (isSub ? '/month' : '') : 'Paid';
+  document.getElementById('successRef').textContent = ref;
+
+  const emailEl = document.getElementById('pEmail');
+  document.getElementById('successEmail').textContent = emailEl ? emailEl.value || 'Confirmation sent' : 'Confirmation sent';
+
+  document.getElementById('paySuccess').classList.add('show');
+
+  // Update order strip
+  document.getElementById('payOrderName').textContent = service;
+  document.getElementById('payOrderPrice').textContent = price ? '\u20ac' + parseFloat(price).toFixed(2) : '';
+}
+
+// ── Shop checkout ──────────────────────────────────────────────
+function checkout() {
+  const items = Object.values(cart);
+  if (items.length === 0) return;
+  const total = items.reduce((s,i) => s + i.price * i.qty, 0);
+  const names = items.map(i => i.name).join(', ');
+
+  document.getElementById('cartDrawer').classList.remove('open');
+  document.getElementById('cartOverlay').classList.remove('open');
+
+  openPayModal('Shop Order (' + items.length + ' item' + (items.length > 1 ? 's' : '') + ')', total.toFixed(2), 'onetime', true, items);
+}
+
+// ── Form helpers ───────────────────────────────────────────────
+function resetForm() {
+  ['pFirstName','pLastName','pEmail','pPhone','pNotes','cardNumber','cardExpiry','cardCvc','cardName'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.value = '';
+  });
+}
+
+function highlightField(id) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  el.style.borderColor = 'var(--red)';
+  el.focus();
+  setTimeout(() => { el.style.borderColor = ''; }, 2000);
+}
+
+// ── Notification ───────────────────────────────────────────────
+function showNotif(message, type) {
+  const existing = document.querySelector('.sl-notif');
+  if (existing) existing.remove();
+  const n = document.createElement('div');
+  n.className = 'sl-notif';
+  const colors = { error: '#881010', info: '#1a3a6a', success: '#1a5c1a' };
+  const borders = { error: 'rgba(204,17,17,0.5)', info: 'rgba(26,58,106,0.8)', success: 'rgba(34,180,80,0.4)' };
+  n.style.cssText = 'position:fixed;top:1.5rem;left:50%;transform:translateX(-50%);'
+    + 'background:' + (colors[type] || colors.info) + ';color:#fff;'
+    + 'padding:0.8rem 1.5rem;font-size:0.78rem;z-index:9999;'
+    + 'border:1px solid ' + (borders[type] || borders.info) + ';white-space:nowrap;'
+    + 'animation:fadeUp 0.3s ease;box-shadow:0 8px 24px rgba(0,0,0,0.4);';
+  n.textContent = message;
+  document.body.appendChild(n);
+  setTimeout(() => n.remove(), 3000);
+}
+
+
+
+</script>
 </body>
 </html>
