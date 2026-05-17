@@ -8,8 +8,6 @@
 <title>ShoeLab.de — Premium Shoe Care · Bremen</title>
 
 <!-- Stripe -->
-<script src="https://js.stripe.com/v3/"></script>
-
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -17,12 +15,9 @@
 
 <style>
 
-@font-face { font-family: 'Bebas Neue'; font-display: swap; }
-@font-face { font-family: 'Inter'; font-display: swap; }
-/* ── CRITICAL: Prevent flash of unstyled content ── */
+/* ── CRITICAL: Force background always ── */
 html { background: #080808; }
-body { background: #080808; opacity: 0; transition: opacity 0.3s ease; }
-body.loaded { opacity: 1; }
+body { background: #080808; }
 
 
 :root {
@@ -1637,6 +1632,7 @@ img { max-width: 100%; height: auto; display: block; }
   .g-item { min-height: 200px; }
 }
 </style>
+<script src="https://js.stripe.com/v3/"></script>
 </head>
 <body>
 
@@ -3543,11 +3539,8 @@ function showNotif(message, type) {
 
 
 <script>
+try {
 
-// ── Prevent flash of unstyled content ──────────────────────────
-document.addEventListener('DOMContentLoaded', function() {
-  document.body.classList.add('loaded');
-});
 
 const navbar=document.getElementById('navbar');
 window.addEventListener('scroll',()=>navbar.classList.toggle('scrolled',scrollY>60));
@@ -4350,6 +4343,9 @@ function showNotif(message, type) {
 
 
 
+} catch(e) {
+  console.error('ShoeLab JS error:', e);
+}
 </script>
 </body>
 </html>
